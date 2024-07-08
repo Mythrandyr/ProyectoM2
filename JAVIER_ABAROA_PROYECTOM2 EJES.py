@@ -1,27 +1,32 @@
 #proyecto m2
 #este programa es para definir en que cuadrantes se localizan lo valores x & y
 #este es para pedir los valores en x & y
-x = int (input ('Ingresa el valor de x: '))
-y = int (input ('Ingresa el valor de y: '))
+while True:
+  try:
+    x = int (input ('Ingresa el valor de x: '))
+    y = int (input ('Ingresa el valor de y: '))
+    break #sale del bucle si se introducen los datos correctos
+  except ValueError:
+    print ('Datos incorrectos, por favor introduce informacion correcta (numeros enteros).')
 #esta es para el origen
 if x==0 and y==0:
     print ('Origen')
 #esta es para eje y
-if x==0:
+elif x==0:
     print ('Eje Y')
 #esta para eje x
-if y==0:
+elif y==0:
     print ('Eje X')
 #esta es para cuadrantre 1
-if x>0 and y>0:
+elif x>0 and y>0:
     print ('Cuadrante I')
 #esta es para cuadrante 2
-if x<0 and y>0:
+elif x<0 and y>0:
     print ('Cuadrante II')
 #esta es para cuadrante 3
-if x<0 and y<0:
+elif x<0 and y<0:
     print ('Cuadrante III')
 #esta es para cuadrante 4
-if x>0 and y<0:
-    print ('Cuadrante VI')
+elif x>0 and y<0:
+    print ('Cuadrante IV')
 print ()
